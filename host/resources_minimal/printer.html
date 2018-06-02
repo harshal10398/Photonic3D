@@ -17,7 +17,7 @@
 	    </div>
 	</div>
 	<div class="list-group">
-		<div class="list-group-item">
+		<div class="list-group-item" style="display: none;">
 			<span class="fa-stack fa-lg">
 			  <i class="fa fa-stack-2x fa-2x fa-print"></i>
 			  <i class="fa fa-stack-2x fa-2x fa-refresh fa-spin text-danger" ng-show="printersController.currentPrinter.configuration.AutoStart"></i>
@@ -25,19 +25,19 @@
 			<label>Name</label>
 			<h4 class="list-group-item-heading">{{printersController.currentPrinter.configuration.name}}</h4>
 		</div>
-		<div class="list-group-item">
+		<div class="list-group-item" style="display: none;">
 			<label>Serial Port</label>
 			<h4 class="list-group-item-heading">{{printersController.currentPrinter.configuration.machineConfig.MotorsDriverConfig.ComPortSettings.PortName}}</h4>
 		</div>
-		<div class="list-group-item">
+		<div class="list-group-item" style="display: none;">
 			<label>Display</label>
 			<h4 class="list-group-item-heading">{{printersController.currentPrinter.configuration.machineConfig.MonitorDriverConfig.OSMonitorID}}</h4>
 		</div>
-		<div class="list-group-item">
+		<div class="list-group-item" style="display: none;">
 			<label>Autostart</label>
 			<h4 class="list-group-item-heading">{{printersController.currentPrinter.configuration.AutoStart}}</h4>
 		</div>
-		<div class="list-group-item">
+		<div class="list-group-item" style="display: none;">
 			<!--<div class="btn-group pull-right">
 				<button class="btn btn-primary" ng-click="printersController.gotoPrinterControls()" >
 					<b class="fa fa-wrench"></b> 
@@ -54,7 +54,7 @@
 			  <option value="">{{printersController.loadingMachineConfigMessage}}</option>
 			</select>
 		</div>
-		<div class="list-group-item">
+		<div class="list-group-item" style="display: none;">
 			<label>Slicing Profile</label>
 			<h4 class="list-group-item-heading">{{printersController.currentPrinter.configuration.SlicingProfileName}}
 			<div class="btn-group pull-right" style=" padding-bottom: 5px;" >
@@ -79,7 +79,7 @@
 			  <option value="">{{printersController.loadingProfilesMessage}}</option>
 			</select>
 		</div>
-		<div class="list-group-item">
+		<div class="list-group-item" style="display: none;">
 			<label>Ink Configuration</label>
 			<h4 class="list-group-item-heading">{{printersController.currentPrinter.configuration.slicingProfile.SelectedInk}}
 			<div class="btn-group pull-right" style=" padding-bottom: 5px;" >
@@ -104,8 +104,11 @@
 			</select>
 		</div>
 	</div>
-			
 	<div class="panel-footer">
 		<span ng-include="'cardFooter.html'"></span>
 	</div>
+	
+</div>
+<div class="panel panel-default">
+	<span ng-include="printersController.gotoPrinterControls()"></span>
 </div>

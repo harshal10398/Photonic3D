@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-sm-6 bootcards-list">
+	<div class="col-sm-12 bootcards-list">
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
 				<span class="pull-left fa-stack fa-lg">
@@ -16,7 +16,7 @@
 				</div>
 			</div>
 			<div class="list-group">
-				<div class="list-group-item">
+				<div class="list-group-item" style="display: none;">
 					<i class="fa fa-2x fa-arrows-h pull-left"></i>
 					<h4>X Axis</h4>
 					<span class="btn-group" >
@@ -31,7 +31,7 @@
 						<a class="btn btn-sm btn-success fa fa-angle-double-right" ng-click="printerControlsController.move('X', 50)"> 50</a>
 					</span>
 				</div>
-				<div class="list-group-item">
+				<div class="list-group-item" style="display: none;">
 					<i class="fa fa-2x fa-expand pull-left"></i>
 					<h4>Y Axis</h4>
 					<span class="btn-group clearfix" >
@@ -61,7 +61,7 @@
 						<span class="btn btn-sm btn-success fa fa-angle-double-up" ng-click="printerControlsController.move('Z', 50)"> 50</span>
 					</span>
 				</div>
-				<div class="list-group-item">
+				<div class="list-group-item" style="display: none;">
 					<i class="fa fa-2x fa-bolt pull-left"></i>
 					<h4>Motors</h4>
 					<span class="btn-group" >
@@ -75,7 +75,7 @@
 						</a>
 					</span>
 				</div>
-				<div class="list-group-item">
+				<div class="list-group-item" style="display: none;">
 					<i class="fa fa-2x fa-code pull-left"></i>
 					<h4>Execute Gcode</h4>
 					<div class="input-group">
@@ -86,6 +86,41 @@
 					</div>
 					<textarea class="form-control" ng-model="printerControlsController.gcodeProcessing" rows="6"></textarea>
 				</div>
+				<div class="list-group-item">
+					<i class="fa fa-2x fa-code pull-left"></i>
+					<h4>LED</h4>
+					<span class="btn-group">
+						<a class="btn btn-success btn-sm" ng-click="printerControlsController.executeGCode(M106)">
+							<b class="fa fa-toggle-on"></b>
+							<b class="cwh-text-indent">ON</b>
+						</a>
+						<a class="btn btn-danger btn-sm" ng-click="printerControlsController.executeGCode(M107)">
+							<b class="fa fa-toggle-off"></b>
+							<b class="cwh-text-indent">OFF</b>
+						</a>
+					</span>
+				</div>
+				<div class="list-group-item" ng-hide="printerControlsController.currentPrinter.printInProgress">
+					<i class="fa fa-2x fa-th pull-left"></i>
+					<h4>Grid Screen (pixels)</h4>
+					<div class="input-group"
+						cwh-spinner 
+						placeholder="pixels"
+						min="1" 
+						max="500" 
+						inc="1" 
+						goClick="printerControlsController.showGridScreen()" 
+						incClick="printerControlsController.showGridScreen()"
+						decClick="printerControlsController.showGridScreen()"
+						ng-model="printerControlsController.squarePixelSize">
+					</div>
+				</div>
+				<div class="list-group-item" ng-hide="printerControlsController.currentPrinter.printInProgress">
+					<a class="btn btn-primary btn-sm" ng-click="printerControlsController.showBlankScreen()">
+						<b class="fa fa-square-o"></b>
+						<b class="cwh-text-indent">Show Blank Screen</b>
+					</a>
+				</div>
 			</div>
 			
 			<div class="panel-footer">
@@ -93,7 +128,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-sm-4 bootcards-list" id="list">
+	<div class="col-sm-4 bootcards-list" id="list" style="display: none;">
 		<div class="panel panel-default">
 			<div class="panel-heading clearfix">
 				<span class="pull-left fa-stack fa-lg">
