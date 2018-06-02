@@ -12,8 +12,8 @@ The server is capable of printing a variety of formats, including:
  - SVG file, which Photonic3D will extrude and optionally print a 3D relief
 
 This repo focuses on making Photonic3D work on asus tinkerboard... i am a begineer to this so expect hiccups here and there!
-
-#Raspberry Pi Usage
+<!--
+Raspberry Pi Usage
 #-------------------------------------------------------------------------------  
 #If you have a brand new dedicated Raspberry Pi, there is a flashable Jessie Lite based image that you can use to quickly get started. Download the [Raspberry Pi system image](http://d359hvxwrop0le.cloudfront.net/photonic-image.zip) and then take a look at the 
 #[image install docs at photonic3d.com](https://wiki.photonic3d.com/doku.php?id=raspberry_pi) for the installation instructions.
@@ -24,7 +24,7 @@ This repo focuses on making Photonic3D work on asus tinkerboard... i am a begine
 -------------------------------------------------------------------------------  
 #![image](https://cloud.githubusercontent.com/assets/2078819/14433486/58291f82-ffc3-11e5-8bc3-f7b8313dbc18.png)
 #![image](https://cloud.githubusercontent.com/assets/2078819/14433580/a984246c-ffc3-11e5-94ff-7214f6bd0635.png)
-
+-->
 
 Use with Creation Workshop
 -------------------------------------------------------------------------------  
