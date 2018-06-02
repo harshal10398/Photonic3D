@@ -1,6 +1,6 @@
 		<div class="row">
 			<!-- Printables -->
-			<div class="col-sm-5 bootcards-list" id="list">
+			<div class="col-sm-12 bootcards-list" id="list">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<i class="fa fa-2x fa-files-o pull-left"></i>
@@ -38,7 +38,7 @@
 								</p>
 						</a>
 					</div>
-					<div class="panel-footer">
+					<div class="panel-footer" style="display: none;">
 						<button class="btn btn-primary btn-sm" ng-click="printablesController.goToSlacer()">
 							<b class="fa fa-external-link"></b> 
 							<span>Open SLAcer.js</span>
@@ -50,7 +50,7 @@
 			<!-- End Printables -->
 
 			<!-- Preview Box -->
-			<div class="col-sm-7" id="preview" ng-show="printablesController.currentPrintable">
+			<div class="col-sm-12" id="preview" ng-show="printablesController.currentPrintable">
 				<div class="preview-box"> 
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -81,7 +81,7 @@
 			<!-- End Preview Box -->
 
 			<!-- Customizer -->
-			<div class="col-sm-7 bootcards-list pull-right" id="controls" ng-show="!printablesController.errorMsg && printablesController.currentPrintable">
+			<div class="col-sm-12 bootcards-list pull-right" id="controls" ng-show="!printablesController.errorMsg && printablesController.currentPrintable">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<i class="fa fa-2x fa-magic pull-left"></i>
@@ -233,7 +233,7 @@
 						</div>
 					</div>
 					<!-- End list group -->
-					<div class="panel-footer">
+					<div class="panel-footer" style="display: none;">
 						<span ng-include="'cardFooter.html'"></span>
 					</div>
 				</div>
@@ -241,7 +241,7 @@
 			<!-- End Customizer -->
 			
 			<!-- Advanced Customizations -->
-			<div class="col-sm-7 bootcards-list pull-right" id="controls" ng-show="!printablesController.errorMsg && printablesController.currentPrintable">
+			<div class="col-sm-12 bootcards-list pull-right" id="controls" style="display: none;" ng-show="!printablesController.errorMsg && printablesController.currentPrintable">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<i class="fa fa-2x fa-graduation-cap pull-left"></i>
@@ -325,7 +325,7 @@
 						</div>
 					</div>
 					<!-- End list group -->
-					<div class="panel-footer">
+					<div class="panel-footer" style="display: none;">
 						<span ng-include="'cardFooter.html'"></span>
 					</div>
 				</div>

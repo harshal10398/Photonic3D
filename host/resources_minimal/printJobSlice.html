@@ -9,7 +9,7 @@
 	   <span class="pull-right">Last slice cost: {{printJobsController.currentPrintJob.currentSliceCost | number : 5}}</span>
 	</div>
 	<img ng-src="{{printJobsController.currentSliceImage}}" class="img-responsive"/>
-	<div class="panel-footer">
+	<div class="panel-footer" style="display: none;">
 		<span ng-include="'cardFooter.html'"></span>
 	</div>
 </div>

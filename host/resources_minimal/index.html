@@ -30,7 +30,7 @@
 <meta name="theme-color" content="#ffffff">
 
 
-  	<title>Photonic3D</title>
+  	<title>LIPS</title>
   	
 	<!-- Load the required CSS libraries -->
 		<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -108,8 +108,9 @@
           <span class="icon-bar"></span>
         </button>
 
-        <!-- CWH title goes here -->        
-        <a class="navbar-brand no-break-out" title="Photonic3D" href="./index.html">Photonic3D</a> 
+        <!-- CWH title goes here -->
+        
+        <a class="navbar-brand no-break-out" title="Photonic3D" href="./index.html">LIPS</a> 
 
 
       </div>
@@ -156,6 +157,11 @@
             <a href="./settingsPage" ng-click="index.currentPage = 'settingsPage'" class="fa fa-gears" ng-show='visibleCards.indexOf("settings") > -1'>
               Settings
             </a>          
+          </li>
+          <li class="" style="background-color: red;">
+            <a href="" class="fa fa-gears" style="color: white;" ng-click="printerControlsController.executeGCode(M107);printerControlsController.executeGCode();">
+              Emergency Stop
+            </a>
           </li>
         </ul>
       </div>          
