@@ -13,6 +13,7 @@ if [ -z "$HOME" ] || [ "$HOME" == "/" ]; then
 fi
 
 DEFAULT_REPO="area515/Creation-Workshop-Host"
+#DEFAULT_REPO="harshal10398/Creation-Workshop-Host"
 CONFIG_PROPS="${HOME}/3dPrinters/config.properties"
 
 echo "Local Config: $CONFIG_PROPS"
@@ -82,28 +83,28 @@ else
 fi
 
 if [ "$javaMinorVersion" -lt 8 -a "$javaMajorVersion" -le 1 ]; then
-	downloadJavaFile=`echo ${javaURL} | awk -F/ '{print $(NF)}'`
+	#downloadJavaFile=`echo ${javaURL} | awk -F/ '{print $(NF)}'`
 	echo Either Java is not installed, or an incorrect version of Java is installed. Installing from this URL: ${javaURL}
-	mkdir -p /usr/lib/jvm
-	cd /usr/lib/jvm
-	rm ${downloadJavaFile}
-	wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "${javaURL}"
+	#mkdir -p /usr/lib/jvm
+	#cd /usr/lib/jvm
+	#rm ${downloadJavaFile}
+	#wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "${javaURL}"
+	apt-get install --yes --force-yes openjdk-8-jdk
+	#firstSnapshot=`ls -1`
+	#echo Unzipping and installing Java now
+	#tar xzf ${downloadJavaFile}
+	#secondSnapshot=`ls -1`
+	#javaInstallFile=`echo "$firstSnapshot"$'\n'"$secondSnapshot" | sort | uniq -u`
 
-	firstSnapshot=`ls -1`
-	echo Unzipping and installing Java now
-	tar xzf ${downloadJavaFile}
-	secondSnapshot=`ls -1`
-	javaInstallFile=`echo "$firstSnapshot"$'\n'"$secondSnapshot" | sort | uniq -u`
+	#if [ -z "${javaInstallFile}" ]; then
+	#	echo "A new version of Java is available, please update this script with the proper download URLS from: http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+	#	exit
+	#fi
 
-	if [ -z "${javaInstallFile}" ]; then
-		echo "A new version of Java is available, please update this script with the proper download URLS from: http://www.oracle.com/technetwork/java/javase/downloads/index.html"
-		exit
-	fi
-
-	ln -sf /usr/lib/jvm/${javaInstallFile}/bin/java /usr/bin/java
-	ln -sf /usr/lib/jvm/${javaInstallFile}/bin/javac /usr/bin/javac
-	ln -sf /usr/lib/jvm/${javaInstallFile}/bin/keytool /usr/bin/keytool
-	rm ${downloadJavaFile}
+	#ln -sf /usr/lib/jvm/${javaInstallFile}/bin/java /usr/bin/java
+	#ln -sf /usr/lib/jvm/${javaInstallFile}/bin/javac /usr/bin/javac
+	#ln -sf /usr/lib/jvm/${javaInstallFile}/bin/keytool /usr/bin/keytool
+	#rm ${downloadJavaFile}
 fi
 
 #Determine if a new install is available
