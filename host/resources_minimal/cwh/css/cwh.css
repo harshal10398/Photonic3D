@@ -9,10 +9,52 @@
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  /* background-color: #344955; */
   height: 100%; }
   
 html, body {
   /*overflow-y: scroll;*/
   overflow-y: hidden;
   height: 100%;
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+  background-color: #484848;
+ }
+ .navbar{
+   background-color: #212121;
+   border: 0;
+   /* color: white; */
+ }
+ .navbar-default .navbar-nav>li>a{
+   color: white;
+ }
+.navbar .navbar-brand{
+  color: white;
+}
+.panel{
+  border: 0;
+}
+.panel-default .panel-heading{
+  background-color: #212121;
+  color: white;
+  border: 0;
+}
+.panel-body{
+  background-color: #6d6d6d;
+}
+.bootcards-summary-item{
+  background-color: #8e8e8e;
+  color: white;
+}
+.list-group, .list-group-item{
+  background-color: #6d6d6d;
+  border: 0;
+}
+.list-group-item i, .list-group-item h4{
+  color: white;
+}
+a.list-group-item .list-group-item-heading, button.list-group-item .list-group-item-heading{
+  color: white;
+}
+.list-group-item-text{
+  color: white;
+}
